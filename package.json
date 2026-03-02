@@ -1,0 +1,8 @@
+{
+  "name": "pacoto",
+  "scripts": {
+    "start": "npm start --prefix cli",
+    "dev": "npm run dev --prefix cli",
+    "web": "npm run web --prefix cli"
+  }
+}

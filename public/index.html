@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$ PaCoTo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <span class="header-title">$ PaCoTo — Project Dashboard</span>
+    <div class="header-filters">
+      <button class="filter-btn active" data-filter="all">all</button>
+      <button class="filter-btn" data-filter="active" data-tooltip="Projects currently being worked on">active</button>
+      <button class="filter-btn" data-filter="deployed" data-tooltip="Projects with a live public deployment">deployed</button>
+      <button class="filter-btn" data-filter="dirty" data-tooltip="Projects with uncommitted local changes">• dirty</button>
+      <button class="filter-btn" data-filter="parked" data-tooltip="Projects on hold — not actively developed">parked</button>
+      <button class="reload-btn" id="reload-btn" data-tooltip="Re-scan vault notes and git status">↺ refresh</button>
+    </div>
+  </header>
+
+  <div id="status-bar">scanning vault + git…</div>
+
+  <main>
+    <table id="projects-table">
+      <thead>
+        <tr>
+          <th data-tooltip="GitHub repository name. Click a row to expand project details.">REPO</th>
+          <th data-tooltip="Lifecycle stage: idea → active → half-finished → deployed → parked">STATUS</th>
+          <th data-tooltip="Priority — P0: critical, P1: high, P2: normal, P3: low">PRI</th>
+          <th data-tooltip="Subjective completion estimate (0–100%)">PROGRESS</th>
+          <th data-tooltip="Git sync vs remote branch.&#10;• = uncommitted local changes&#10;↑ = unpushed commits&#10;↓ = commits to pull">SYNC</th>
+          <th data-tooltip="Domain grouping: bjj · photography · tools · education">AREA</th>
+          <th data-tooltip="Next concrete step, recorded in the Obsidian note">NEXT ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="projects-body"></tbody>
+    </table>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
