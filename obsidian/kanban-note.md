@@ -12,6 +12,7 @@ tags: [pacoto, kanban]
 - [ ] [[Grappling Primitives]]
 - [ ] [[UdejujiHakai]]
 - [ ] [[BJJ Pricing]]
+- [ ] [[MiniCogDigitSpanTest]]
 
 ## half-finished
 

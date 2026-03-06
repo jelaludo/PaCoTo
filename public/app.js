@@ -10,6 +10,7 @@ const LAUNCH_TIPS = {
   dev:      'Start the local development server',
   cli:      'Run the PaCoTo CLI dashboard in a terminal',
   backend:  'Start the API / backend server (run in a second terminal)',
+  browse:   'Open the local dev site in your default browser',
 };
 
 const INFO_TIPS = {

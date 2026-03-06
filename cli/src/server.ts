@@ -49,7 +49,7 @@ app.patch('/api/projects/:slug', (req, res) => {
 app.post('/api/launch', (req, res) => {
   const { command, cwd } = req.body as { command: string; cwd?: string };
   if (!command) return res.status(400).json({ error: 'No command' });
-  const isLauncher = /^(wt|code)\b/i.test(command.trim());
+  const isLauncher = /^(wt|code|cmd)\b/i.test(command.trim());
   const cmd = isLauncher
     ? command
     : `wt${cwd ? ` -d "${cwd}"` : ''} -- cmd /k ${command}`;
